@@ -9,7 +9,7 @@ from basic.enums import OptimizationType
 class UnaryFunction(ABC):
     """
     Represents a unary function.
-    The function should be continuous, defined everywhere and local optimum analysable.
+    The function should be continuous, defined everywhere and has local optimum analyzability.
     """
     def __init__(self):
         super().__init__()
@@ -43,8 +43,8 @@ class UnaryFunction(ABC):
         Plot the function in the given range.
         Useful for checking the correctness of implementation of local_optimum().
         Example:
-            rast = RastriginFunc()
-            rast.plot(-5.12, 5.12)
+            r = RastriginFunc()
+            r.plot(-5.12, 5.12)
         """
         x = np.linspace(x_min, x_max, 500)
         y = [self.evaluate(xi) for xi in x]

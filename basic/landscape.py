@@ -43,6 +43,9 @@ class Landscape:
         return self.evaluator(x)
 
     def plot_1d_func(self, point_num: int = 500):
+        """
+        Plot an 1D function.
+        """
         if self.dim != 1:
             raise ValueError("This function should only be used for drawing 1D functions.")
 
@@ -55,8 +58,8 @@ class Landscape:
         plt.legend()
         plt.show()
 
-    def plot_2d_func_flat(self, show_dots: bool = False, show_figures: bool = True, frame_interval: int = 1000,
-                          results=None):
+    def plot_2d_exploration(self, show_dots: bool = False, show_figures: bool = True, frame_interval: int = 1000,
+                            results=None):
         """
         Plot the 2D function in a flat style.
         This function has the ability to ANIMATE the exploration process, and therefore is the most important exhibit function.

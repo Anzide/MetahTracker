@@ -45,7 +45,7 @@ def main():
     pso.run()
 
     # Show the exploration progress
-    ls.plot_2d_func_flat(frame_interval=1000, results=pso.results)
+    ls.plot_2d_exploration(frame_interval=1000, results=pso.results)
 
 
 if __name__ == '__main__':
