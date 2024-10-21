@@ -68,6 +68,11 @@ Others:
 - Classes **OptimizationType** and **MoveType** in **enums.py**: They jointly define the evaluation criteria for any update movement of an individual.
 - Class **Algorithm**.
 
+**Known Issues**
+
+- The definition of MoveType might not be completely correct for PSO, cause there is not actual rejection in the current implementation of PSO - any vector update is applied to the position of particle, with no rejecting mechanism.  
+- Any other known issues could be found by searching comment "TODO" in the whole project.
+
 **Acknowledgments**
 
 I would like to express my sincere gratitude to Professor [Stephen Chen](https://profiles.laps.yorku.ca/profiles/sychen/) for giving me the opportunity to undertake the internship, as well as for his invaluable supervision and advice throughout my research. I am also deeply thankful to Professor [Tim Hendtlass](https://www.researchgate.net/profile/Tim-Hendtlass) for his insightful suggestions and the chance to refer his previous work, without which this project might not have been completed.
