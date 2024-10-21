@@ -10,7 +10,7 @@ This is a project aims to track and observe how various algorithms run on given 
 
 2. Run **demo.py**, and your will see two dynamic plots (the second appears after closing the first one). The first plot shows a two-dimension landscape where fitness function is the Rastrigin function, and the second shows the process of Particle Swarm Optimization algorithm being executed on the landscape.
 
-<img src="https://i.ibb.co/W0P6rTT/img0.png" style="zoom: 50%;" /><img src="https://i.ibb.co/vXtLwC5/img1.png" style="zoom: 60%;" />
+<img src="https://i.ibb.co/W0P6rTT/img0.png" style="zoom: 35%;" /><img src="https://i.ibb.co/vXtLwC5/img1.png" style="zoom: 50%;" />
 
 3. You could try to use a different landscape in **main()** by commenting choose_rastrigin_landscape() and uncommenting another:
 
