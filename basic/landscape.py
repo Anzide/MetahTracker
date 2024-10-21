@@ -91,10 +91,6 @@ class Landscape:
         ax.set_xlim(self.bounds[0])
         ax.set_ylim(self.bounds[1])
 
-        # for name,_ in OptimizationType.__members__.items():
-
-        # red_patch = mpatches.Patch(color='red', label='Important Area')
-
         patches = [mpatches.Patch(color=color, label=name.value) for name, color in exploration_color_map.items()]
         ax.legend(handles=patches, loc='upper right')
 
@@ -161,6 +157,10 @@ class Landscape:
 
 
 class DimSeparatedLandscape(Landscape):
+    """
+    A DimSeparatedLandscape is a landscape that is separated by dimensions. That is, each dimension has its own function.
+    And the fitness of a point is the sum of the fitness of each dimension.
+    """
 
     def __init__(self, dim: int,
                  global_target_type: OptimizationType,
@@ -205,6 +205,7 @@ class DimSeparatedLandscape(Landscape):
         if np.allclose(base_optimum_coord, target_optimum_coord, rtol=1e-9, atol=0.0):
             return OptimumComparison.SAME
 
+        # --- DEBUG ---
         # base_optimum_coord = np.array(base_optimum_coord)
         # target_optimum_coord = np.array(target_optimum_coord)
 
@@ -233,6 +234,7 @@ class DimSeparatedLandscape(Landscape):
         else:
             fitness_comparison = target_fitness < base_fitness
 
+        # --- DEBUG ---
         # print("--- compare_solution START ---")
         # print(f"base: {base}, target: {target}, base_fitness: {base_fitness}, target_fitness: {target_fitness}")
         # print(f"base_fitness: {base_fitness}, target_fitness: {target_fitness}")
