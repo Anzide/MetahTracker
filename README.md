@@ -1,4 +1,5 @@
 **Metah Tracker**
+
 This is a program aims to track and observe how various algorithms run on given landscapes (fitness functions). Particularly, it focus on detailed observation on population-based metaheuristic algorithms, such as Particle Swarm Optimization and Differential Evolution.
 
 **Quick Demo**
@@ -7,7 +8,18 @@ This is a program aims to track and observe how various algorithms run on given 
 
 > pip install -r requirements.txt
 
-2. Go to **demo.py**, and try to run different functions in **main()**.
+2. Run demo.py, and your will see two plots (the second appears after closing the first one).
+
+![img0](../image/img0.png?raw=true)
+![img1](../image/img1.png?raw=true)
+
+2. Try to use different landscapes in **main()**:
+
+```
+# ls = choose_decaying_cosine_landscape()
+# ls = choose_random_parabola_landscape()
+# ls = choose_rastrigin_landscape()
+```
 
 // TODO: Add details 
 
