@@ -61,7 +61,7 @@ class Landscape:
     def plot_2d_exploration(self, show_dots: bool = False, show_figures: bool = True, frame_interval: int = 1000,
                             results=None):
         """
-        Plot the 2D function in a flat style.
+        Plot the exploration process of an algorithm on a 2D landscape.
         This function has the ability to ANIMATE the exploration process, and therefore is the most important exhibit function.
         :param show_dots: Use dots to display an individual.
         :param show_figures: Use figures to display an individual.
@@ -135,7 +135,7 @@ class Landscape:
 
     def plot_2d_func_surface(self):
         """
-        Plot the landscape in a 3D surface style.
+        Plot a 2D landscape in a 3D surface style.
         """
 
         if self.dim != 2:
@@ -224,7 +224,8 @@ class DimSeparatedLandscape(Landscape):
     # TODO: Not yet consider the situation where fitness is equal.
     def compare_solution(self, base: ndarray, target: ndarray) -> MoveType:
         """
-        Compare two solutions on the landscape, and return how the target solution compares to the base solution.
+        Compare two solutions on the landscape, and return how the target solution compares to the base solution:
+        Is it an exploration or exploitation? Accepted or Rejected? Successful or Failed?
         """
         optimum_comparison = self.compare_local_optimum(base, target)
         if optimum_comparison == OptimumComparison.SAME:
